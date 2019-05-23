@@ -22,7 +22,7 @@ public class ProviderServiceImpl implements ProviderService {
 	 * @return
 	 */
 	public int queryCount(String proCode, String proName) {
-		
+		System.out.println("456");
 		return providerMapper.queryCount(proCode, proName);
 	}
 	/**
