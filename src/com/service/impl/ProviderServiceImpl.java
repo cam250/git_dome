@@ -15,18 +15,18 @@ public class ProviderServiceImpl implements ProviderService {
 	@Resource
 	private ProviderMapper providerMapper;
 	/**
-	 * 供应商编码(模糊匹配)
-	 * 供应商名称(模糊匹配)
+	 * 渚涘簲鍟嗙紪鐮�(妯＄硦鍖归厤)
+	 * 渚涘簲鍟嗗悕绉�(妯＄硦鍖归厤)
 	 * @param proCode
 	 * @param proName
 	 * @return
 	 */
 	public int queryCount(String proCode, String proName) {
-		
+		System.out.println("123");
 		return providerMapper.queryCount(proCode, proName);
 	}
 	/**
-	 * 分页并按条件查询供应商表
+	 * 鍒嗛〉骞舵寜鏉′欢鏌ヨ渚涘簲鍟嗚〃
 	 * @param proCode
 	 * @param proName
 	 * @param from
@@ -38,7 +38,7 @@ public class ProviderServiceImpl implements ProviderService {
 		return providerMapper.getProviderList(proCode, proName, from, pageSize);
 	}
 	/**
-	 * 供应商新增方法
+	 * 渚涘簲鍟嗘柊澧炴柟娉�
 	 * @param provider
 	 * @return
 	 */
@@ -47,16 +47,16 @@ public class ProviderServiceImpl implements ProviderService {
 		return providerMapper.addProvider(provider);
 	}
 	/**
-	 * 通过ID查询供应商详情对象信息
-	 * @param id 供应商ID
-	 * @return 供应商详细对象信息
+	 * 閫氳繃ID鏌ヨ渚涘簲鍟嗚鎯呭璞′俊鎭�
+	 * @param id 渚涘簲鍟咺D
+	 * @return 渚涘簲鍟嗚缁嗗璞′俊鎭�
 	 */
 	public Provider getProviderById(Integer id) {
 		// TODO Auto-generated method stub
 		return providerMapper.getProviderById(id);
 	}
 	/**
-	 * 供应商修改方法
+	 * 渚涘簲鍟嗕慨鏀规柟娉�
 	 * @param provider
 	 * @return
 	 */
